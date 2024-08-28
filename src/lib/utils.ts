@@ -21,7 +21,6 @@ export async function generateImage(data: TDataGenerateImage) {
         width: data.parameter.width,
       },
     });
-
     return result;
   } catch (error) {
     return { errorMessage: error };

@@ -1,21 +1,17 @@
-import { useEffect, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import RootLayout from "./pages/RootLayout";
+import GeneratorPage from "./pages/GeneratorPage";
 
 export default function App() {
-  const [data, setData] = useState("");
-
-  const handle = async () => {
-    const result = "Hahah";
-    console.log(result);
-    setData(result as unknown as string);
-  };
-
-  useEffect(() => {
-    handle();
-  }, []);
-
   return (
-    <div>
-      <img src={data} alt="" />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<RootLayout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route element={<GeneratorPage />} path="/generator" />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
