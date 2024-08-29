@@ -9,7 +9,9 @@ import { loras } from "@/lib/loras";
 import { generateImage, TDataGenerateImage } from "@/lib/utils";
 import { FolderDown, Image } from "lucide-react";
 import { useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { toast } from "sonner";
+import "react-lazy-load-image-component/src/effects/opacity.css";
 
 export default function GeneratorPage() {
   const [prompt, setPrompt] = useState("");
@@ -112,9 +114,13 @@ export default function GeneratorPage() {
                         }
                         className="border relative h-[24vh] w-full rounded-md overflow-hidden cursor-pointer group"
                       >
-                        <img
-                          src={data.img}
+                        <LazyLoadImage
                           alt={data.title}
+                          effect="opacity"
+                          wrapperProps={{
+                            style: { transitionDelay: "1s" },
+                          }}
+                          src={data.img}
                           className="h-full min-w-full object-cover group-hover:scale-105 duration-300"
                         />
                         <p className="absolute z-10 bottom-0 text-sm inset-x-0 px-2 py-1 bg-background/90">

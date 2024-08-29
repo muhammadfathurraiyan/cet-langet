@@ -1,11 +1,21 @@
 import { buttonVariants } from "@/components/ui/button";
 import { Send, Twitter } from "lucide-react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/opacity.css";
 
 export default function AboutPage() {
   return (
     <section className="p-24 max-lg:px-4 space-y-8">
       <div className="flex lg:items-center max-lg:flex-col gap-8 max-lg:gap-4">
-        <img src="/vite.svg" alt="" className="size-24 rounded-lg" />
+        <LazyLoadImage
+          alt={"logo"}
+          effect="opacity"
+          wrapperProps={{
+            style: { transitionDelay: "1s" },
+          }}
+          src={"/vite.svg"}
+          className="size-24 rounded-lg"
+        />
         <h1 className="text-5xl lg:text-9xl font-bold relative z-10 bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/50">
           CET LANGET
         </h1>
