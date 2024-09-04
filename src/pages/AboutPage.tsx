@@ -144,7 +144,7 @@ export default function AboutPage() {
         <p>Wanna talk more? find me on:</p>
         <div className="flex items-center gap-2">
           <a
-            href="https://github.com/black-forest-labs/flux/blob/main/model_licenses/LICENSE-FLUX1-dev"
+            href="https://x.com/mfraiyan"
             className={buttonVariants({ size: "icon", variant: "secondary" })}
             target="_blank"
           >
@@ -152,7 +152,7 @@ export default function AboutPage() {
             <span className="sr-only">twitter</span>
           </a>
           <a
-            href="https://github.com/black-forest-labs/flux/blob/main/model_licenses/LICENSE-FLUX1-dev"
+            href="https://t.me/pengaruhbesar"
             className={buttonVariants({ size: "icon", variant: "secondary" })}
             target="_blank"
           >
