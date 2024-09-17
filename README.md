@@ -1,5 +1,6 @@
 # Cet Langet
 Text to image ai tool powered by [flux.1 dev](https://blackforestlabs.ai/) model.
+Live demo: https://cet-langet.vercel.app/
 
 ## Techstack
 - React
